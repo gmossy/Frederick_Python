@@ -7,13 +7,19 @@ This repository contains Python projects and tutorials from various meetups. Eac
 ```
 Frederick_Python/
 ├── 2025/
-│   ├── 06-11/              # June 11, 2025 Meetup
+│   ├── June-11/              # June 11, 2025 Meetup
 │   │   ├── calculator-demo/          # Calculator demo project with Poetry environment
 │   │   ├── patterns/                 # Python design patterns and workflow examples
 │   │   │   └── workflows/           # Workflow pattern implementations
-│   │   └── nirbar/                  # AI Travel Agent project
-│   │       └── agents/             # Agent implementations
-│   └── 08-00/              # August 2025 Meetup placeholder
+│   │   ├── nirbar/                  # AI Travel Agent project
+│   │   │   └── agents/             # Agent implementations
+│   │   ├── demo/                   # Demo projects
+│   │   ├── demo-basic-agent/       # Basic agent demo
+│   │   ├── presentations/          # Presentation materials
+│   │   ├── files-demo/            # Files demo project
+│   │   ├── tool-agent-tutorial/   # Tool agent tutorial
+│   │   └── web-search-demo/       # Web search demo
+│   └── August/              # August 2025 Meetup placeholder
 │       └── README.md        # Placeholder for August meetup projects
 └── templates/               # Template for new meetups
     └── meetup-template/     # Template directory structure
@@ -28,7 +34,7 @@ git clone https://github.com/gmossy/Frederick_Python.git
 
 2. Navigate to the desired meetup directory and then to the specific project:
 ```bash
-cd 2025/06-11/calculator-demo  # Example for calculator demo
+cd 2025/June-11/calculator-demo  # Example for calculator demo
 ```
 ```bash
 cd 2025/June-11/calculator-demo  # Example for calculator demo
@@ -38,7 +44,7 @@ cd 2025/June-11/calculator-demo  # Example for calculator demo
 
 ## Projects from June 11, 2025 Meetup
 
-All projects below are located in the `2025/06-11` directory:
+All projects below are located in the `2025/June-11` directory:
 - **Calculator Demo**
   - Uses Poetry for environment management
   - Python 3.11.9
@@ -62,7 +68,7 @@ To add projects for future meetups:
 
 1. Copy the template directory:
 ```bash
-cp -r templates/meetup-template 2025/08-00/
+cp -r templates/meetup-template 2025/August/
 ```
 
 2. Update the README.md in the new meetup directory with the specific projects for that meetup.
