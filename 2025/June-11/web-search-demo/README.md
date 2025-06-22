@@ -2,6 +2,14 @@
 
 This demo is part of the Frederick Python Meetup series, designed for Python developers to explore how to build a simple web-search agent using LangChain and Tavily.
 
+## Resources
+- [Tavily Search](https://app.tavily.com/)
+- [Tavily API Docs](https://docs.tavily.com/)
+- [OpenAI GPT-4.1](https://platform.openai.com/docs/models/gpt-4)
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction)
+- [Anthropic Workflows Overview](https://docs.anthropic.com/claude/docs/workflows)
+- [Python Frederick Meetup](https://www.meetup.com/pythonfrederick/)
+
 ## Features
 - Uses Tavily web search as a tool
 - Powered by OpenAI's GPT-4.1 model

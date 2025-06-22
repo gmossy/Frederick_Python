@@ -2,6 +2,12 @@
 
 This demo was created for the Frederick Python Meetup to showcase a specialized tool agent designed to perform mathematical calculations using OpenAI's GPT-4.1 model.
 
+## Resources
+- [OpenAI GPT-4.1](https://platform.openai.com/docs/models/gpt-4)
+- [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction)
+- [Anthropic Workflows Overview](https://docs.anthropic.com/claude/docs/workflows)
+- [Python Frederick Meetup](https://www.meetup.com/pythonfrederick/)
+
 ## Features
 
 - Performs mathematical calculations
