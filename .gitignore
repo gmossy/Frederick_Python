@@ -1,0 +1,21 @@
+# Ignore all .env and key files
+*.env
+.env*
+*key*
+
+# Ignore Python virtual environments
+venv/
+*/venv/
+
+# Ignore system files
+.DS_Store
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+
+# Ignore local config
+*.local
