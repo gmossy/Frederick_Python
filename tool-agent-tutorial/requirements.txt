@@ -1,0 +1,5 @@
+python-dotenv>=1.1.0
+openai>=1.84.0
+requests>=2.32.3
+langchain-openai>=0.3.21
+langchain>=0.3.25

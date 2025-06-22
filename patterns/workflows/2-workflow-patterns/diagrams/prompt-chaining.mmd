@@ -1,0 +1,19 @@
+
+graph TD
+    A[Input: Raw Text] --> B[LLM 1: Extract Basic Info]
+    B --> C[LLM 2: Format Data]
+    C --> D[LLM 3: Generate Output]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    
+    subgraph LLM Chain
+        B --> C --> D
+    end
+    
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px
+    classDef llm fill:#bbf,stroke:#333,stroke-width:2px
+    class B,C,D llm
+

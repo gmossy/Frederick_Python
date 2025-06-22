@@ -1,0 +1,51 @@
+
+### What this does:
+- Fetches the current weather for Frederick, MD.
+- Prints the weather description and temperature in Fahrenheit.
+
+Would you like me to explain any part of this code or help you run it?
+
+> Finished chain.
+
+🤖 Agent: Great! Here’s how you can get the current weather for Frederick, MD using Python and the OpenWeatherMap API.
+
+### Step 1: Get an API Key
+1. Go to [OpenWeatherMap](https://openweathermap.org/api).
+2. Sign up for a free account.
+3. Get your API key from your account dashboard.
+
+### Step 2: Install the Requests Library
+If you don’t have requests installed, run:
+```bash
+pip install requests
+```
+
+### Step 3: Example Python Code
+
+Replace YOUR_API_KEY with your actual API key.
+
+```python
+import requests
+
+API_KEY = 'YOUR_API_KEY'
+CITY = 'Frederick,US'
+URL = f'http://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=imperial'
+
+response = requests.get(URL)
+data = response.json()
+
+if data['cod'] == 200:
+    weather = data['weather'][0]['description']
+    temp = data['main']['temp']
+    print(f"Current weather in {CITY}: {weather}, {temp}°F")
+else:
+    print("Could not retrieve weather data.")
+```
+
+### What this does:
+- Fetches the current weather for Frederick, MD.
+- Prints the weather description and temperature in Fahrenheit.
+
+Would you like me to explain any part of this code or help you run it?
+
+--------------------------------------------------

@@ -1,0 +1,37 @@
+```mermaid
+graph TD
+    A[Input: Complex Task] --> B[Orchestrator]
+    
+    B --> C[LLM 1: Task 1]
+    B --> D[LLM 2: Task 2]
+    B --> E[LLM 3: Task 3]
+    
+    C --> F[Orchestrator]
+    D --> F
+    E --> F
+    
+    F --> G[Output]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style F fill:#bbf,stroke:#333,stroke-width:2px
+    style G fill:#f9f,stroke:#333,stroke-width:2px
+    
+    subgraph Orchestrator System
+        B
+        F
+    end
+    
+    subgraph Task LLMs
+        C
+        D
+        E
+    end
+    
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px
+    classDef llm fill:#bbf,stroke:#333,stroke-width:2px
+    class B,C,D,E,F llm
+```

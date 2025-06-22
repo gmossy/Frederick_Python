@@ -1,0 +1,32 @@
+
+graph TD
+    A[Input: User Query] --> B[Router LLM]
+    B --> C[LLM 1: Task 1]
+    B --> D[LLM 2: Task 2]
+    B --> E[LLM 3: Task 3]
+    
+    C --> F[Output]
+    D --> F
+    E --> F
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bbf,stroke:#333,stroke-width:2px
+    style D fill:#bbf,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style F fill:#f9f,stroke:#333,stroke-width:2px
+    
+    subgraph Router
+        B
+    end
+    
+    subgraph Task LLMs
+        C
+        D
+        E
+    end
+    
+    classDef default fill:#f9f,stroke:#333,stroke-width:2px
+    classDef llm fill:#bbf,stroke:#333,stroke-width:2px
+    class B,C,D,E llm
+```
