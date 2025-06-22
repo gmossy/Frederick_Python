@@ -1,17 +1,22 @@
-# Python Projects Collection
+# Python Meetup Projects
 
-This repository contains various Python projects and tutorials organized into different categories.
+This repository contains Python projects and tutorials from various meetups. Each meetup has its own directory containing all projects from that event.
 
 ## Project Structure
 
 ```
 Frederick_Python/
-├── calculator-demo/          # Calculator demo project with Poetry environment
-├── demo-basic-agent/         # Basic agent tutorial
-├── patterns/                 # Python design patterns and workflow examples
-│   └── workflows/           # Workflow pattern implementations
-├── nirbar/                  # AI Travel Agent project
-└── tool-agent-tutorial/     # Tool agent tutorial
+├── 2025/
+│   ├── 06-11/              # June 11, 2025 Meetup
+│   │   ├── calculator-demo/          # Calculator demo project with Poetry environment
+│   │   ├── patterns/                 # Python design patterns and workflow examples
+│   │   │   └── workflows/           # Workflow pattern implementations
+│   │   └── nirbar/                  # AI Travel Agent project
+│   │       └── agents/             # Agent implementations
+│   └── 08-00/              # August 2025 Meetup placeholder
+│       └── README.md        # Placeholder for August meetup projects
+└── templates/               # Template for new meetups
+    └── meetup-template/     # Template directory structure
 ```
 
 ## Setup Instructions
@@ -21,26 +26,46 @@ Frederick_Python/
 git clone https://github.com/gmossy/Frederick_Python.git
 ```
 
-2. Navigate to the desired project directory and follow its specific setup instructions.
+2. Navigate to the desired meetup directory and then to the specific project:
+```bash
+cd 2025/06-11/calculator-demo  # Example for calculator demo
+```
+```bash
+cd 2025/June-11/calculator-demo  # Example for calculator demo
+```
 
-## Project Details
+3. Follow the project-specific setup instructions in each directory.
 
-### Calculator Demo
-- Uses Poetry for environment management
-- Python 3.11.9
-- Located in `/calculator-demo`
+## Projects from June 11, 2025 Meetup
 
-### AI Travel Agent
-- Located in `/nirbar/ai-travel-agent`
-- Contains agent implementations
+All projects below are located in the `2025/06-11` directory:
+- **Calculator Demo**
+  - Uses Poetry for environment management
+  - Python 3.11.9
+  - Located in `/2025/June-11/calculator-demo`
 
-### Patterns and Workflows
-- Located in `/patterns/workflows`
-- Contains workflow pattern implementations and design patterns
+- **Patterns and Workflows**
+  - Located in `/patterns/workflows`
+  - Contains workflow pattern implementations and design patterns
 
-### Basic Agent Tutorial
-- Located in `/demo-basic-agent`
-- Contains basic agent implementation examples
+- **AI Travel Agent**
+  - Located in `/nirbar/agents`
+  - Contains agent implementations
+
+- **Tool Agent Tutorial**
+  - Located in `/demo-basic-agent`
+  - Contains basic agent implementation examples
+
+## Future Meetups
+
+To add projects for future meetups:
+
+1. Copy the template directory:
+```bash
+cp -r templates/meetup-template 2025/08-00/
+```
+
+2. Update the README.md in the new meetup directory with the specific projects for that meetup.
 
 ## Contributing
 
