@@ -1,14 +1,30 @@
 # Tutorial 1: Basic Conversational Agent
 # Frederick Python Meetup - AI Agents Workshop
 
+"""
+basic_agent_tutorial.py
+----------------------
+A basic conversational agent demo for the Frederick Python Meetup.
+
+- Loads environment variables from the nearest .env file (should be at month/project root).
+- Requires OPENAI_API_KEY to be set in the .env file at the root of the month directory (e.g., June-11/.env).
+
+Usage:
+    python3 basic_agent_tutorial.py
+"""
+
 import os
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.schema import HumanMessage, AIMessage
 
-# Load environment variables
+# Load environment variables from .env (should be at month/project root)
 load_dotenv()
+api_key = os.getenv('OPENAI_API_KEY')
+print('Loaded OPENAI_API_KEY:', api_key)
+if not api_key:
+    print('WARNING: OPENAI_API_KEY is missing or empty! Please set it in your .env file.')
 
 class BasicAgent:
     """

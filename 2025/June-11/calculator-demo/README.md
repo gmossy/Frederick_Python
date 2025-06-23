@@ -47,3 +47,8 @@ The agent will prompt you for mathematical expressions to solve. It maintains a 
 This project uses the `gpt-4.1` model from OpenAI.
 
 Note: The model configuration is set in the [CalculatorAgent](cci:2://file:///Users/gmossy/Frederick_Python/calculator-demo/calculator_agent.py:42:0-100:20) class initialization.
+
+
+To check your API key, run the following command:
+python3 -c "import os; from dotenv import load_dotenv, find_dotenv; env_path = find_dotenv(); print('find_dotenv() found:', env_path); load_dotenv(env_path); print('Loaded OPENAI_API_KEY:', os.getenv('OPENAI_API_KEY'))"
+

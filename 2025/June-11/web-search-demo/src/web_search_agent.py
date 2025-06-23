@@ -1,3 +1,15 @@
+"""
+web_search_agent.py
+------------------
+A web search agent demo using LangChain and OpenAI.
+
+- Loads environment variables from the nearest .env file (should be at month/project root).
+- Requires OPENAI_API_KEY to be set in the .env file at the root of the month directory (e.g., June-11/.env).
+
+Usage:
+    python3 src/web_search_agent.py
+"""
+
 import os
 from dotenv import load_dotenv
 from langchain.prompts import ChatPromptTemplate
@@ -9,6 +21,13 @@ from googlesearch import search
 import requests
 from bs4 import BeautifulSoup
 from langchain_openai import ChatOpenAI
+
+# Load environment variables from .env (should be at month/project root)
+load_dotenv()
+api_key = os.getenv('OPENAI_API_KEY')
+print('Loaded OPENAI_API_KEY:', api_key)
+if not api_key:
+    print('WARNING: OPENAI_API_KEY is missing or empty! Please set it in your .env file.')
 
 class WebSearchTool:
     """Tool for performing web searches."""

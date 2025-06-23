@@ -1,6 +1,18 @@
 # Tutorial 2: Tool-Using Agent
 # Frederick Python Meetup - AI Agents Workshop
 
+"""
+tool_agent_tutorial.py
+---------------------
+A tool-using agent demo for the Frederick Python Meetup.
+
+- Loads environment variables from the nearest .env file (should be at month/project root).
+- Requires OPENAI_API_KEY to be set in the .env file at the root of the month directory (e.g., June-11/.env).
+
+Usage:
+    python3 tool_agent_tutorial.py
+"""
+
 import os
 import json
 import requests
@@ -13,8 +25,12 @@ from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.schema import BaseMessage
 from pydantic import BaseModel, Field
 
-# Load environment variables
+# Load environment variables from .env (should be at month/project root)
 load_dotenv()
+api_key = os.getenv('OPENAI_API_KEY')
+print('Loaded OPENAI_API_KEY:', api_key)
+if not api_key:
+    print('WARNING: OPENAI_API_KEY is missing or empty! Please set it in your .env file.')
 
 # Custom Tools Definition
 class CalculatorTool(BaseTool):
